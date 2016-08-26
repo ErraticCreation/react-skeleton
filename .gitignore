@@ -11,3 +11,7 @@
 
 # Ignore installed npm packages
 /node_modules
+
+# Ignore Jetbrains WebStorm user specific config files
+.idea/workspace.xml
+.idea/watcherTasks.xml
