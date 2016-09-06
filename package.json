@@ -1,10 +1,12 @@
 {
   "name": "react-skeleton",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "A basic React Skeleton to be used as a starting point for future purely Front-End projects.",
   "main": "/src/main.jsx",
   "scripts": {
-    "start": "watchify src/main.jsx -v -t [babelify --presets [  react ] ] -o public/js/main.js",
+    "start": "npm run build-sass & npm run build-react",
+    "build-react": "watchify src/main.jsx -v -t [babelify --presets [  react ] ] -o public/js/main.js",
+	"build-sass": "node-sass -f --watch --output-style compressed --include-path public/css/ src/scss/main.scss public/css/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +28,7 @@
     "babel-preset-react": "^6.11.1",
     "babelify": "^7.3.0",
     "browserify": "^13.1.0",
+    "node-sass": "^3.9.3",
     "watchify": "^3.7.0"
   }
 }
