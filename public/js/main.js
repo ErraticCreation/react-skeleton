@@ -20755,7 +20755,7 @@ var List = React.createClass({
 
     return React.createElement(
       'ul',
-      null,
+      { className: 'list-unstyled' },
       listItems
     );
   }

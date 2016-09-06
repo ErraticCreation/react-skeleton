@@ -9,7 +9,7 @@ var List = React.createClass({
       return <ListItem key={item.id} ingredient = {item.text} />;
     });
 
-    return (<ul>{listItems}</ul>);
+    return (<ul className="list-unstyled">{listItems}</ul>);
   }
 });
 
